@@ -1,0 +1,29 @@
+$(".newspan").mouseleave(function(){
+        $(".para-2 p").fadeOut(100,function(){
+            $(".para-2 h4").fadeOut(100,function(){
+                $(".para-2").animate({
+                    height:"0px"
+                },500,function(){
+                    $(".para-2").animate({
+                        width: "10px"
+                    },500,function(){
+                        $(".para-2").fadeOut(500)
+                    })
+                })
+            })
+        })
+    });
+
+
+    $(".logospan").hover(function(){
+        $(".carlogo").animate({
+            width : "150px",
+            height : "150px"
+        });
+    });
+    $(".logospan").mouseleave(function(){
+        $(".carlogo").animate({
+            width : "0px",
+            height : "0px"
+        });
+    });

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lAMBO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jqurey.min.js"></script>
+</head>
+<body>
+    <div class="hero">
+        <span>
+            <img src="images/image 1.png" alt="" class="logo">
+            <img src="images/image 2.png" alt="" class="name">
+        </span>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCTS 1</a></li>
+            <li><a href="#">parteners</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact us</a></li>
+            <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a class = "srhBtn"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-shield"></i></a></li>
+        </ul>
+    </div>
+    <div class="body-1">
+        <h1>introducing the new</h1>
+        
+        <span>
+            <img src="images/Revuelto.png" alt="" class="rev">
+            <img src="images/image 3lightoff.png" alt="" class="lambo">
+            <img src="images/image 3.png" alt="" class="lambo-on">
+        </span>
+        <span class="para-2">
+            <h4>Tires</h4>
+            <p>FRONT TIRES
+                265/35 ZR20 - Potenza Sport Runflat (265/30 ZR21 - Runflat optional)</p>
+        </span>
+        <p class="para-1">The Lamborghini Revuelto marks a new era with its first HPEV (High Performance Electrified Vehicle), blending sustainability 
+            and powerful performance. Featuring an iconic V12 engine, this hybrid masterpiece redefines 
+            paradigms, offering unparalleled performance and driving emotions.</p>
+        
+        <div>
+            <span>Read More...</span>
+            <span>Buy Now</span>
+        </div>
+        <span class="newspan"></span>
+        <span class="logospan"></span>
+        <span class="engine"></span>
+        <img src="images/logo.png" alt="" class="carlogo">
+        <button type="button" onclick="snd.play()" class = "soundBtn"><i class="fa-solid fa-power-off"></i></button>
+
+    </div>
+    <span class="search">
+        <button type="button">X</button>
+    </span>
+<script type="text/javascript">
+    $(".newspan").mouseenter(function(){
+        $(".para-2").fadeIn(10,function(){
+            $(".para-2").animate({
+            width: "300px"
+        },300,function(){
+            $(".para-2").animate({
+                height : "140px"
+            },100,function(){
+                $(".para-2 h4").fadeIn(200,function(){
+                    $(".para-2 p").fadeIn(200);
+                });
+            });
+        });
+        });
+    });
+    $(".newspan").mouseleave(function(){
+        $(".para-2").fadeOut(1,function(){
+            $(".para-2 p").css(
+                "display","none"
+            )
+            $(".para-2 h4").css(
+                "display","none"
+            )
+            $(".para-2").css({
+                "width":"10px",
+                "height":"0px"
+            });
+            
+        })
+    })
+    $(".srhBtn").click(function(){
+        $(".search").animate({
+            scale : "2300%"
+        }
+        )
+    });
+    $(".logospan").hover(function(){
+        $(".carlogo").animate({
+            scale : "5000%"
+        });
+    });
+    $(".logospan").mouseleave(function(){
+        $(".carlogo").animate({
+            scale : "0"
+        });
+    });
+    $(".engine").mouseenter(function(){
+        $(".lambo-on").fadeIn(1)
+        //$(".lambo").css("display","none")
+    });
+    $(".engine").mouseleave(function(){
+        //$(".lambo").css("display","inline"),
+        $(".lambo-on").fadeOut(1)   
+    });
+    $(".soundBtn").click(function(){
+        snd.play(),
+        $(".lambo-on").fadeIn(1)
+        setTimeout(function(){
+            $(".lambo-on").fadeOut(1)
+        },3000)
+    });
+    
+
+    
+    
+    var snd = new Audio("SOunds/lambo-start-up-sound-26364_VqbCA3Jp.mp3"); 
+    
+</script>
+</body>
+</html>
