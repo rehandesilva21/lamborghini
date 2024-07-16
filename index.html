@@ -107,18 +107,18 @@
         });
     });
     $(".engine").mouseenter(function(){
-        $(".lambo-on").fadeIn(1)
+        $(".lambo-on").fadeIn('slow')
         //$(".lambo").css("display","none")
     });
     $(".engine").mouseleave(function(){
         //$(".lambo").css("display","inline"),
-        $(".lambo-on").fadeOut(1)   
+        $(".lambo-on").fadeOut('slow')   
     });
     $(".soundBtn").click(function(){
         snd.play(),
-        $(".lambo-on").fadeIn(1)
+        $(".lambo-on").fadeIn('slow')
         setTimeout(function(){
-            $(".lambo-on").fadeOut(1)
+            $(".lambo-on").fadeOut('slow')
         },3000)
     });
     
